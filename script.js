@@ -1,51 +1,57 @@
 const outputCard = document.getElementById("output-card");
 
-const membri = [
-  (membro1 = {
-    nome: "MARCO BIANCHI",
-    ruolo: "Designer",
+const teamMembers = [
+  {
+    name: "Marco Bianchi",
+    role: "Designer",
     email: "marcobianchi@team.com",
-  }),
-  (membro2 = {
-    nome: "LAURA ROSSI",
-    ruolo: "Front-end Developer",
+    img: "img/male1.png",
+  },
+  {
+    name: "Laura Rossi",
+    role: "Front-end Developer",
     email: "laurarossi@team.com",
-  }),
-  (membro3 = {
-    nome: "GIORGIO VERDI",
-    ruolo: "Back-end Developer",
-    email: "giorgoiverdi@team.com",
-  }),
-  (membro4 = {
-    nome: "MARTA IPSUM",
-    ruolo: "SEO Specialist",
-    email: "martaipsum@team.com",
-  }),
-  (membro5 = {
-    nome: "ROBERTO LOREM",
-    ruolo: "SEO Specialist",
+    img: "img/female1.png",
+  },
+  {
+    name: "Giorgio Verdi",
+    role: "Back-end Developer",
+    email: "giorgioverdi@team.com",
+    img: "img/male2.png",
+  },
+  {
+    name: "Marta Ipsum",
+    role: "SEO Specialist",
+    email: "martarossi@team.com",
+    img: "img/female2.png",
+  },
+  {
+    name: "Roberto Lorem",
+    role: "SEO Specialist",
     email: "robertolorem@team.com",
-  }),
-  (membro6 = {
-    nome: "DANIELA AMET",
-    ruolo: "Analyst",
+    img: "img/male3.png",
+  },
+  {
+    name: "Daniela Amet",
+    role: "Analyst",
     email: "danielaamet@team.com",
-  }),
+    img: "img/female3.png",
+  },
 ];
 
 const getNome = (indice) => {
-  return membri[indice].nome;
+  return teamMembers[indice].nome;
 };
 
 const getRuolo = (indice) => {
-  return membri[indice].ruolo;
+  return teamMembers[indice].ruolo;
 };
 
 const getEmail = (indice) => {
-  return membri[indice].email;
+  return teamMembers[indice].email;
 };
 
-for (let i = 0; i < membri.length; i++) {
+for (let i = 0; i < teamMembers.length; i++) {
   const htmlCard = `
     <div class="card mb-3 bg-black text-white" style="max-width: 400px" id="output-card">
         <div class="row g-0">
