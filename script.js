@@ -40,15 +40,19 @@ const teamMembers = [
 ];
 
 const getNome = (indice) => {
-  return teamMembers[indice].nome;
+  return teamMembers[indice].name;
 };
 
 const getRuolo = (indice) => {
-  return teamMembers[indice].ruolo;
+  return teamMembers[indice].role;
 };
 
 const getEmail = (indice) => {
   return teamMembers[indice].email;
+};
+
+const getImg = (indice) => {
+  return teamMembers[indice].img;
 };
 
 for (let i = 0; i < teamMembers.length; i++) {
@@ -56,7 +60,7 @@ for (let i = 0; i < teamMembers.length; i++) {
     <div class="card mb-3 bg-black text-white" style="max-width: 400px" id="output-card">
         <div class="row g-0">
             <div class="col-md-4">
-              <img src="./img/male1.png" class="img-fluid rounded-start" />
+              <img src="./${getImg(i)}" class="img-fluid rounded-start" />
             </div>
             <div class="col-md-8">
               <div class="card-body">
@@ -65,7 +69,6 @@ for (let i = 0; i < teamMembers.length; i++) {
                 <a href="#" class="text-decoration-none">${getEmail(i)}</a>
               </div>
             </div>
-        </div>
-    </div> `;
+         `;
   outputCard.innerHTML = htmlCard;
 }
