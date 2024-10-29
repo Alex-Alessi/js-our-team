@@ -55,10 +55,16 @@ const getImg = (indice) => {
   return teamMembers[indice].img;
 };
 
+let cardsHtml = ``;
+
 for (let i = 0; i < teamMembers.length; i++) {
-  const htmlCard = `
-    <div class="card mb-3 bg-black text-white" style="max-width: 400px" id="output-card">
-        <div class="row g-0">
+  const userCard = `
+  <div class="col">
+    <div 
+    class="card mb-3 bg-black text-white" 
+    style="max-width: 400px" 
+    id="output-card">
+        <div class="row">
             <div class="col-md-4">
               <img src="./${getImg(i)}" class="img-fluid rounded-start" />
             </div>
@@ -69,6 +75,9 @@ for (let i = 0; i < teamMembers.length; i++) {
                 <a href="#" class="text-decoration-none">${getEmail(i)}</a>
               </div>
             </div>
+          </div>
          `;
-  outputCard.innerHTML = htmlCard;
+  cardsHtml += userCard;
 }
+
+outputCard.innerHTML = cardsHtml;
